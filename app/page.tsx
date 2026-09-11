@@ -1,5 +1,5 @@
 /* oxlint-disable next/no-img-element */
-import StayPlanner from './StayPlanner';
+import CallbackSection from './CallbackSection';
 import {
   ArrowDown,
   ArrowUpRight,
@@ -110,7 +110,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#request">
-              Выбрать даты поездки
+              Заказать звонок
               <ArrowUpRight size={18} aria-hidden="true" />
             </a>
             <a
@@ -146,7 +146,7 @@ export default function Home() {
           <p className="eyebrow dark">Формат проживания</p>
           <h2>
             Петергоф в своём ритме.
-            <br />
+            {' '}<br />
             Место для вашего отдыха.
           </h2>
         </div>
@@ -211,7 +211,7 @@ export default function Home() {
           <p className="eyebrow">Кому подойдёт</p>
           <h2 id="stay-title">
             Свой ритм
-            <br />в историческом пригороде
+            {' '}<br />в историческом пригороде
           </h2>
         </div>
         <ol className="stay-list">
@@ -225,7 +225,7 @@ export default function Home() {
         </ol>
       </section>
 
-      <StayPlanner />
+      <CallbackSection />
 
       <section className="location section" id="location">
         <iframe className="location-map" title="Яндекс Карта: Университетская дача" src="https://yandex.ru/map-widget/v1/?ol=biz&oid=2476452892&z=16" width="100%" height="420" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
@@ -233,7 +233,7 @@ export default function Home() {
           <p className="eyebrow dark">Адрес</p>
           <h2>
             Петергоф,
-            <br />
+            {' '}<br />
             улица Первого Мая, 36/1
           </h2>
           <p>Точная точка гостевого дома на карте. Перед поездкой уточните время заезда и удобный подъезд.</p>
@@ -256,7 +256,7 @@ export default function Home() {
           <p className="eyebrow">Связаться напрямую</p>
           <h2 id="booking-title">
             Уточните даты
-            <br />и условия проживания
+            {' '}<br />и условия проживания
           </h2>
           <p>
             Актуальную стоимость, свободные номера и время заезда подтвердят по
