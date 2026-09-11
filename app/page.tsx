@@ -1,3 +1,4 @@
+import Motion from "./Motion";
 /* oxlint-disable next/no-img-element */
 import CallbackSection from './CallbackSection';
 import {
@@ -51,6 +52,7 @@ const stayReasons = [
 export default function Home() {
   return (
     <main>
+      <Motion />
       <a className="skip-link" href="#content">
         К содержанию
       </a>
@@ -102,7 +104,7 @@ export default function Home() {
           </p>
           <p className="eyebrow">Гостевой дом в Петергофе</p>
           <h1 id="hero-title">
-            Когда главное —<em>спокойно остановиться.</em>
+            Когда главное&nbsp;—<em>спокойно остановиться.</em>
           </h1>
           <p className="hero-copy">
             «Университетская дача» — практичная точка для поездки по Петергофу:
