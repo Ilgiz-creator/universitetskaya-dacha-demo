@@ -1,4 +1,5 @@
 /* oxlint-disable next/no-img-element */
+import StayPlanner from './StayPlanner';
 import {
   ArrowDown,
   ArrowUpRight,
@@ -75,7 +76,7 @@ export default function Home() {
           <a href="#location">Как добраться</a>
         </nav>
 
-        <a className="header-call" href={phoneHref}>
+        <a className="header-call" href={phoneHref} aria-label="Позвонить в гостевой дом">
           <Phone size={17} aria-hidden="true" />
           <span>Позвонить</span>
         </a>
@@ -97,7 +98,7 @@ export default function Home() {
         <div className="hero-content" id="content">
           <p className="concept-label">
             <Sparkles size={14} aria-hidden="true" />
-            Приватный концепт сайта
+            Демонстрационный концепт
           </p>
           <p className="eyebrow">Гостевой дом в Петергофе</p>
           <h1 id="hero-title">
@@ -108,8 +109,8 @@ export default function Home() {
             свой санузел, нужная техника в номере, Wi‑Fi и парковка.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href={phoneHref}>
-              Узнать о свободных датах
+            <a className="button button-primary" href="#request">
+              Выбрать даты поездки
               <ArrowUpRight size={18} aria-hidden="true" />
             </a>
             <a
@@ -128,6 +129,7 @@ export default function Home() {
           </a>
         </div>
 
+        <p className="hero-art-note">Авторская иллюстрация · не фотография гостевого дома</p>
         <aside className="rating-card" aria-label="Рейтинг в Яндекс Картах">
           <span className="rating-star" aria-hidden="true">
             <Star size={18} fill="currentColor" />
@@ -143,16 +145,16 @@ export default function Home() {
         <div className="intro-heading">
           <p className="eyebrow dark">Формат проживания</p>
           <h2>
-            Не курортный блеск.
+            Петергоф в своём ритме.
             <br />
-            Нормальная база для поездки.
+            Место для вашего отдыха.
           </h2>
         </div>
         <div className="intro-copy">
           <p>
-            В отзывах гости чаще всего ценят самостоятельность: можно приехать
-            на машине, оставить её на парковке и вернуться в номер, где есть
-            бытовые мелочи для обычной жизни.
+            Планируйте день по-своему: приезжайте на машине, оставляйте её на парковке
+            и возвращайтесь в номер после прогулки. Чайник, холодильник и
+            микроволновка помогут устроиться на несколько дней.
           </p>
           <p className="fine-print">
             Стоимость, правила заезда и доступность конкретного номера лучше
@@ -184,11 +186,11 @@ export default function Home() {
         <div className="section-title-row">
           <div>
             <p className="eyebrow dark">Всё нужное рядом</p>
-            <h2>Удобства без лишних обещаний</h2>
+            <h2>Для спокойного проживания</h2>
           </div>
           <p>
-            Проверенные детали, которые помогают заранее понять формат
-            проживания.
+            Собственный санузел, техника в номере и связь —
+            повседневный комфорт в поездке.
           </p>
         </div>
 
@@ -223,14 +225,10 @@ export default function Home() {
         </ol>
       </section>
 
+      <StayPlanner />
+
       <section className="location section" id="location">
-        <div className="location-map" aria-hidden="true">
-          <div className="map-lines" />
-          <span className="map-dot">
-            <i />
-          </span>
-          <span className="map-label">ул. Первого Мая, 36/1</span>
-        </div>
+        <iframe className="location-map" title="Яндекс Карта: Университетская дача" src="https://yandex.ru/map-widget/v1/?ol=biz&oid=2476452892&z=16" width="100%" height="420" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
         <div className="location-copy">
           <p className="eyebrow dark">Адрес</p>
           <h2>
@@ -238,14 +236,14 @@ export default function Home() {
             <br />
             улица Первого Мая, 36/1
           </h2>
-          <p>Сохраните точку заранее и постройте маршрут в Яндекс Картах.</p>
+          <p>Точная точка гостевого дома на карте. Перед поездкой уточните время заезда и удобный подъезд.</p>
           <a
             className="text-link"
             href={mapsHref}
             target="_blank"
             rel="noreferrer"
           >
-            Показать на карте
+            Построить маршрут
             <ArrowUpRight size={18} aria-hidden="true" />
           </a>
         </div>
